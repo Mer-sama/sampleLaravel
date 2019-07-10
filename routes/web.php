@@ -47,8 +47,11 @@ Route::post('/display','form@displayData');
 
 Route::get('/insert','form@insertfruits');
 Route::post('/insert','form@insfruit');
+<<<<<<< HEAD
 Route::delete('/fruits/{id}','form@deletefruits');
 Route::get('/fruits/{id}','form@deletefruits');
 Route::get('/fruits','form@displayfruits');
+=======
+>>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
 
 

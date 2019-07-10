@@ -19,6 +19,7 @@ class form extends Controller
       return view('insert');
     }
 
+<<<<<<< HEAD
     public function displayfruits(){
    $user = DB::select("SELECT * from fuits");
                 return view('fruits',['user' => $user]);
@@ -30,6 +31,8 @@ class form extends Controller
                 return view('fruits',['user' => $user]);
 
     }
+=======
+>>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
   
     public function insfruit(Request $request){
           $fname = $request->input('fname');
@@ -43,8 +46,15 @@ class form extends Controller
           $user = DB::insert("INSERT INTO fuits(fruit_name,quantity,brand,price,fruitdesc,total) VALUES(?,?,?,?,?,?)",[$fname,$Quantity,$Brand,$price,$fruitdesc,$total]);
                 $user = DB::select("SELECT * from fuits");
                 return view('fruits',['user' => $user]);
+<<<<<<< HEAD
 
                                                         }
+=======
+        
+
+
+    }
+>>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
 
 
 
