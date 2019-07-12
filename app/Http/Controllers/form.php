@@ -19,7 +19,6 @@ class form extends Controller
       return view('insert');
     }
 
-<<<<<<< HEAD
     public function displayfruits(){
    $user = DB::select("SELECT * from fuits");
                 return view('fruits',['user' => $user]);
@@ -29,10 +28,7 @@ class form extends Controller
       DB::delete("DELETE FROM fuits WHERE id =?",[$id]);
        $user = DB::select("SELECT * from fuits");
                 return view('fruits',['user' => $user]);
-
     }
-=======
->>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
   
     public function insfruit(Request $request){
           $fname = $request->input('fname');
@@ -46,15 +42,61 @@ class form extends Controller
           $user = DB::insert("INSERT INTO fuits(fruit_name,quantity,brand,price,fruitdesc,total) VALUES(?,?,?,?,?,?)",[$fname,$Quantity,$Brand,$price,$fruitdesc,$total]);
                 $user = DB::select("SELECT * from fuits");
                 return view('fruits',['user' => $user]);
-<<<<<<< HEAD
 
                                                         }
-=======
-        
+
+      public function editfruits($id){
+         $user = DB::select("SELECT * from fuits WHERE id =?",[$id]);
+                return view('edit',['user' => $user]);
+
+      }                                                  
+
+      public function updatefruits(Request $request){
+          $id = $request->input('id');
+          $fname = $request->input('fname');
+          $Quantity = $request->input('Quantity');
+          $Brand = $request->input('Brand');
+          $price = $request->input('price');
+          $fruitdesc = $request->input('fruitdesc');
+
+          DB::update("UPDATE fuits set fruit_name = ?, quantity = ?, brand = ?, price=?,fruitdesc=? WHERE id =?",[$fname,$Quantity,$Brand,$price,$fruitdesc,$id]);
+              $user = DB::select("SELECT * from fuits");
+                return view('fruits',['user' => $user]);
+
+      }
 
 
-    }
->>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

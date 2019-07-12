@@ -44,14 +44,18 @@ Route::get('/Form','form@Form');
 Route::get('/display','form@displayrecord');
 Route::post('/display','form@displayData');
 
-
 Route::get('/insert','form@insertfruits');
-Route::post('/insert','form@insfruit');
-<<<<<<< HEAD
+Route::post('/fruits','form@insfruit');
+
+Route::get('/edit/{id}','form@editfruits');
+Route::post('/fruits/{id}','form@updatefruits');
+
+
+Route::post('/fruits','form@insfruit');
+
 Route::delete('/fruits/{id}','form@deletefruits');
 Route::get('/fruits/{id}','form@deletefruits');
+
 Route::get('/fruits','form@displayfruits');
-=======
->>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
 
 

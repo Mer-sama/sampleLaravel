@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 @yield('title')
-<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('bootstrap/css/bootstrap.css') }}">
 <head>
 	<title>
 		Form Activity

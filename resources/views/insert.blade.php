@@ -6,7 +6,7 @@
 <center>
 <div class="conatainer">
 <table table table-reponsive>
-<form method="POST" action="" class="pad">
+<form method="POST" action="/fruits" class="pad">
 {{csrf_field()}}
 <th><h2>Form Activity</h2></th><tr>
 <td>Fruit name:</td> <td><input type="text" name="fname" class="form-control text"></td><tr>

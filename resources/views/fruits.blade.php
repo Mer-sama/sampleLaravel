@@ -16,10 +16,7 @@
 <th>Price</th>
 <th>Desc</th>
 <th>Total</th>
-<<<<<<< HEAD
 <th>Action</th>
-=======
->>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
 <tr>
 @foreach($user as $fruits)
 <tr>
@@ -29,11 +26,7 @@
 <td > {{$fruits ->price}} </td>
 <td > {{$fruits ->fruitdesc}} </td>
 <td > {{$fruits ->total}} </td>
-<<<<<<< HEAD
-<td><a href="/fruits/{{$fruits ->id}}">Delete </td>
-=======
-
->>>>>>> f8026dfc08e7857c456a4db3b756cd26167ef9e8
+<td><a href="/fruits/{{$fruits ->id}}" class="btn btn-danger">Delete</a> <a href="/edit/{{$fruits ->id}}" class="btn btn-info">Edit</a> </td>
 
 @endforeach
 <tr>
