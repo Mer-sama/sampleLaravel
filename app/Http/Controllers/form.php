@@ -33,13 +33,17 @@ class form extends Controller
     public function insfruit(Request $request){
           $fname = $request->input('fname');
           $Quantity = $request->input('Quantity');
+<<<<<<< HEAD
     
+=======
+>>>>>>> a0f9ee1869144da1c01a4b418190695b41fc2fed
           $Brand = $request->input('Brand');
           $price = $request->input('price');
           $fruitdesc = $request->input('fruitdesc');
 
           $total = $Quantity * $price;
 
+<<<<<<< HEAD
           $this->validate($request,[
             'fname' => 'required|alpha',
             'Quantity' => 'required|Integer',
@@ -49,6 +53,8 @@ class form extends Controller
             'fruitdesc' => 'required'
             ]);
 
+=======
+>>>>>>> a0f9ee1869144da1c01a4b418190695b41fc2fed
           $user = DB::insert("INSERT INTO fuits(fruit_name,quantity,brand,price,fruitdesc,total) VALUES(?,?,?,?,?,?)",[$fname,$Quantity,$Brand,$price,$fruitdesc,$total]);
                 $user = DB::select("SELECT * from fuits");
                 return view('fruits',['user' => $user]);
@@ -69,6 +75,7 @@ class form extends Controller
           $price = $request->input('price');
           $fruitdesc = $request->input('fruitdesc');
 
+<<<<<<< HEAD
               $this->validate($request,[
             'fname' => 'required|alpha',
             'Quantity' => 'required|Integer',
@@ -78,6 +85,8 @@ class form extends Controller
             ]);
 
 
+=======
+>>>>>>> a0f9ee1869144da1c01a4b418190695b41fc2fed
           DB::update("UPDATE fuits set fruit_name = ?, quantity = ?, brand = ?, price=?,fruitdesc=? WHERE id =?",[$fname,$Quantity,$Brand,$price,$fruitdesc,$id]);
               $user = DB::select("SELECT * from fuits");
                 return view('fruits',['user' => $user]);

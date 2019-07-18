@@ -26,7 +26,11 @@
 <td > {{$fruits ->price}} </td>
 <td > {{$fruits ->fruitdesc}} </td>
 <td > {{$fruits ->total}} </td>
+<<<<<<< HEAD
 <td><a href="/fruits/{{$fruits ->id}}" class="btn btn-danger">Delete</a> <a href="/edit/{{$fruits ->id}}" class="btn btn-info">Edit</a> <a href="{{url('insert')}}" class="btn btn-primary">Home</a> </td>
+=======
+<td><a href="/fruits/{{$fruits ->id}}" class="btn btn-danger">Delete</a> <a href="/edit/{{$fruits ->id}}" class="btn btn-info">Edit</a> </td>
+>>>>>>> a0f9ee1869144da1c01a4b418190695b41fc2fed
 
 @endforeach
 <tr>
